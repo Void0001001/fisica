@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Site com Bootstrap 5</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #212529; /* Dark background for the body */
+            color: #f8f9fa; /* Light text color */
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #343a40; /* Darker background for the footer */
+            color: #f8f9fa; /* Light text color */
+            padding: 10px 0;
+            text-align: center;
+        }
+        .section-content {
+            background-color: #343a40; /* Dark background for sections */
+            padding: 20px;
+            border: 1px solid #495057; /* Slightly lighter border */
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center; /* Center text */
+        }
+        .section-content img,
+        .section-content video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px; /* Space between elements */
+        }
+        .section-content .img-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px; /* Space between images */
+        }
+        .section-content .img-container img {
+            flex: 1;
+            max-height: 200px; /* Define a height limit for images */
+            object-fit: cover; /* Ensure the images cover the container */
+        }
+        .navbar-dark .navbar-nav .nav-link {
+            color: #f8f9fa; /* Light color for nav links */
+        }
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: #adb5bd; /* Slightly lighter color on hover */
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+        .collapse-section {
+            display: none;
+            background-color: #495057;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        .collapse-section.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">experimentos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#dupla-fenda">Experimento da Dupla Fenda (Thomas Young, 1801)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#michelson-morley">Experimento de Michelson-Morley (1887)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#stern-gerlach">Experimento de Stern-Gerlach (1922)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#novo-card">Novo Card</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#card-adicional">Card Adicional</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#novo-card-duplo">Novo Card Duplo</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <!-- Experimento da Dupla Fenda -->
+            <div class="col-md-4">
+                <section id="dupla-fenda" class="section-content">
+                    <h2>Experimento da Dupla Fenda (Thomas Young, 1801)</h2>
+                    <img src="fenda.jpeg" alt="Experimento da Dupla Fenda">
+                    <video controls>
+                        <source src="fenda2.mp4" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                    <p>O Experimento da Dupla Fenda, realizado por Thomas Young em 1801, demonstrou a natureza ondulatória da luz. Ao passar luz através de duas fendas estreitas, Young observou um padrão de interferência, confirmando que a luz se comporta como uma onda.</p>
+                    <button class="btn btn-light" onclick="toggleCollapse(this)">Mais Informações</button>
+                    <div class="collapse-section">
+                        <p>O experimento consiste em fazer a luz (ou partículas) passar por duas fendas paralelas muito estreitas, que estão próximas uma da outra, em uma tela opaca. A luz que passa por essas fendas atinge uma tela de detecção (ou um anteparo) que registra o padrão resultante.<br>
+                            O que Young observou foi um padrão de franjas brilhantes e escuras na tela de detecção. Esse padrão é conhecido como "padrão de interferência". Se você passasse a luz através de apenas uma das fendas, veria um padrão simples, semelhante ao que se esperaria de uma fonte de luz que passa por um buraco. No entanto, quando ambas as fendas estão abertas, a luz que passa por elas interfere uma com a outra, criando regiões de máxima e mínima intensidade luminosa.<br>
+                            Interferência: O padrão de interferência surge porque as ondas de luz que passam por cada fenda se sobrepõem. Quando as ondas estão em fase (ou seja, suas cristas e vales estão alinhados), elas se reforçam, criando franjas brilhantes. Quando estão fora de fase (ou seja, cristas de uma onda coincidindo com os vales da outra), elas se anulam, criando franjas escuras.<br>
+                            Padrão de Interferência: O padrão de interferência demonstra a interferência construtiva e destrutiva das ondas de água que passaram pelas duas fendas. Esse padrão é muito semelhante ao padrão de interferência observado com luz no Experimento da Dupla Fenda.<br>
+                            Difração: As ondas de água se curvam ao redor das bordas das fendas e se espalham, um fenômeno conhecido como difração. A extensão da difração e a forma do padrão dependem do tamanho das fendas e do comprimento de onda das ondas geradas.</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Experimento de Michelson-Morley -->
+            <div class="col-md-4">
+                <section id="michelson-morley" class="section-content">
+                    <h2>Experimento de Michelson-Morley (1887)</h2>
+                    <img src="morley1.png" alt="Experimento de Michelson-Morley">
+                    <video controls>
+                        <source src="eter.mp4" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                    <p>O Experimento de Michelson-Morley, conduzido em 1887, foi um dos experimentos mais importantes na física, buscando detectar o éter luminífero, uma substância hipotética através da qual a luz se propagaria. A falha em detectar o éter levou ao desenvolvimento da teoria da relatividade de Einstein.</p>
+                    <button class="btn btn-light" onclick="toggleCollapse(this)">Mais Informações</button>
+                    <div class="collapse-section">
+                        <p>O Experimento de Michelson-Morley, realizado em 1887 por Albert A. Michelson e Edward W. Morley, é um dos experimentos mais importantes da física, especialmente no desenvolvimento da teoria da relatividade. O experimento foi projetado para detectar o "éter luminífero", uma substância hipotética que se pensava ser o meio através do qual a luz se propagava, semelhante ao ar para o som. A falta de sucesso em detectar o éter levou a importantes mudanças na física teórica.<br>
+                            Objetivo do Experimento<br>
+                            O objetivo principal era medir a velocidade da luz em diferentes direções para detectar variações que indicariam a presença do éter luminífero. O experimento pretendia verificar se a velocidade da luz dependia do movimento da Terra em relação ao éter e, assim, provar a existência desse éter. A ideia era que, se a luz se propagasse através do éter, então a velocidade da luz deveria variar dependendo da direção em relação ao movimento da Terra através do éter.<br>
+                            Configuração do Experimento<br>
+                            Interferômetro de Michelson: O experimento usou um dispositivo chamado interferômetro de Michelson, que é composto por um feixe de luz dividido em dois caminhos perpendiculares que se encontram em um detector. O dispositivo é projetado para medir diferenças muito pequenas nas distâncias percorridas pela luz.<br>
+                            Divisor de Feixe: O feixe de luz é dividido em dois feixes perpendiculares por um divisor de feixe. Cada feixe viaja ao longo de um braço do interferômetro e depois é refletido de volta para se encontrar com o outro feixe.<br>
+                            Resultados e Interpretação<br>
+                            Resultado Negativo: O resultado do experimento foi negativo. Michelson e Morley não conseguiram detectar qualquer variação na velocidade da luz que indicasse a presença do éter. Isso foi uma grande surpresa e gerou uma crise na física da época.<br>
+                            Implicações para a Física<br>
+                            A ausência de um efeito de éter levou ao desenvolvimento de novas teorias. A teoria da relatividade especial de Albert Einstein, publicada em 1905, forneceu uma nova explicação para a propagação da luz sem a necessidade de um éter. A relatividade especial postulou que a velocidade da luz é constante e não depende do movimento do observador ou do meio através do qual a luz viaja.</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Experimento de Stern-Gerlach -->
+            <div class="col-md-4">
+                <section id="stern-gerlach" class="section-content">
+                    <h2>Experimento de Stern-Gerlach (1922)</h2>
+                    <img src="stan.png" alt="Experimento de Stern-Gerlach">
+                    <video controls>
+                        <source src="gyro.mp4" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                    <p>O Experimento de Stern-Gerlach, realizado por Otto Stern e Walther Gerlach em 1922, foi um experimento fundamental que demonstrou a quantização do momento angular e a natureza discreta dos estados quânticos.</p>
+                    <button class="btn btn-light" onclick="toggleCollapse(this)">Mais Informações</button>
+                    <div class="collapse-section">
+                        <p>O Experimento de Stern-Gerlach, realizado em 1922 por Otto Stern e Walther Gerlach, foi um experimento crucial na física quântica que forneceu evidências para a quantização do momento angular e a natureza discreta dos estados quânticos. O experimento revelou a primeira evidência direta de que partículas como átomos possuem propriedades quantizadas, que só podem assumir certos valores discretos.<br>
+                            Configuração do Experimento<br>
+                            O experimento usou átomos de prata em um feixe que passavam através de um campo magnético não uniforme. A ideia era observar como a orientação do momento magnético dos átomos em relação ao campo magnético afetava sua trajetória.<br>
+                            Campo Magnético: O campo magnético foi projetado para ser não uniforme, o que significa que sua intensidade variava ao longo de uma direção específica. Isso cria uma força que pode ser diferente para diferentes orientações do momento magnético dos átomos.<br>
+                            Resultados e Observações<br>
+                            O feixe de átomos de prata se dividiu em dois caminhos distintos, em vez de se espalhar de forma contínua. Essa divisão indicava que o momento magnético dos átomos tinha apenas dois estados possíveis em relação ao campo magnético. Este resultado foi uma demonstração clara da quantização do momento angular.<br>
+                            Implicações para a Física Quântica<br>
+                            O resultado do experimento confirmou a teoria de que o momento angular de partículas, como átomos e elétrons, é quantizado e pode assumir apenas valores discretos. Esse resultado foi um passo importante para o desenvolvimento da mecânica quântica e ajudou a estabelecer o conceito de spin, uma propriedade intrínseca das partículas que não tem um análogo clássico.</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Novo Card -->
+            <div class="col-md-4">
+                <section id="novo-card" class="section-content">
+                    <h2>A Bobina de Tesla</h2>
+                    <img src="tesla2.png" alt="Novo Card">
+                    <video controls>
+                        <source src="tesla1.mp4" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                    <p>Experimento da Bobina de Tesla, realizado por Nikola Tesla, é uma série de experimentos que exploraram o comportamento das correntes elétricas alternadas de alta frequência e alta tensão. Tesla desenvolveu a bobina de Tesla como um dispositivo para gerar e estudar esses tipos de correntes elétricas. O trabalho de Tesla com a bobina teve implicações significativas para a transmissão sem fio de energia e para o desenvolvimento da tecnologia de rádio e outras inovações.<br>
+                        A bobina de Tesla é um tipo de transformador ressonante que pode gerar tensões muito altas e frequências de oscilação extremamente elevadas<br></p>
+                    <button class="btn btn-light" onclick="toggleCollapse(this)">Mais Informações</button>
+                    <div class="collapse-section">
+                        <p>Ela é composta por duas partes principais:
+
+                            Bobina Primária: Consiste em um enrolamento de fio (ou bobina) conectado a uma fonte de corrente alternada. A bobina primária é geralmente conectada a um interruptor de alta tensão que permite a criação de pulsos elétricos.
+                            
+                            Bobina Secundária: Uma segunda bobina, geralmente enrolada em torno da bobina primária, tem um número muito maior de voltas de fio. Esta bobina é responsável por transformar a tensão para valores muito mais altos devido ao princípio de transformação de um transformador.<br>
+                            Funcionamento do Experimento
+Geração de Corrente Alternada: A bobina primária é alimentada por uma fonte de corrente alternada de alta frequência. O corrente alternada é interrompida e pulsada para criar oscilações rápidas no campo magnético ao redor da bobina primária.
+
+Transferência de Energia: As oscilações na bobina primária induzem uma corrente elétrica na bobina secundária por meio da indução eletromagnética. A bobina secundária está sintonizada para a mesma frequência das oscilações da bobina primária, aumentando a eficiência da transferência de energia.
+
+Criação de Alta Tensão: A tensão gerada na bobina secundária é muito maior do que a tensão fornecida à bobina primária. Isso ocorre devido à relação de transformação do número de espiras entre as bobinas. As tensões podem atingir valores suficientemente altos para criar descargas elétricas visíveis, como faíscas e arco elétrico.
+
+Experimentos de Transmissão: Tesla também utilizou a bobina para experimentar a transmissão sem fio de energia elétrica. Ele demonstrou que era possível transmitir energia elétrica através do ar em forma de campos eletromagnéticos.<br>
+Demonstrações e Aplicações
+Faíscas e Arcos Elétricos: Em uma demonstração clássica, a bobina de Tesla pode gerar faíscas de alta tensão que se estendem por vários metros. Essas faíscas são resultado do alto potencial elétrico e da alta frequência de oscilação.
+
+Luzes Fluorescentes: Em uma configuração experimental, Tesla também mostrou que lâmpadas fluorescentes podem brilhar sem fios conectados diretamente, apenas pela exposição ao campo eletromagnético gerado pela bobina.
+
+Transmissão Sem Fio: Tesla acreditava que a bobina de Tesla poderia ser usada para transmitir energia elétrica sem fios a longas distâncias. Embora ele tenha feito alguns avanços nessa área, a transmissão sem fio de energia em grande escala ainda é um campo de pesquisa em desenvolvimento.
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Novo Card Duplo -->
+            <div class="col-md-4">
+                <section id="novo-card-duplo" class="section-content">
+                    <h2>ORAÇÃO HOJE AS 23:49 PRA FALENCIA DOS CORREIOS</h2>
+                    <div class="img-container">
+                        <img src="morra.png" alt="Experimento 1">
+                        
+                    </div>
+                    <p>Bom eu não consigue terminar a bobina de tesla graças a essa empresa demoniaca, tinha que ser estatal, mas espero que o professor me permita apresentar na proxima aula.<br>
+                    Obrigado pela atenção.</p>
+                   
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleCollapse(button) {
+            const collapseSection = button.nextElementSibling;
+            collapseSection.classList.toggle('show');
+            button.textContent = collapseSection.classList.contains('show') ? 'Menos Informações' : 'Mais Informações';
+        }
+    </script>
+</body>
+</html>
