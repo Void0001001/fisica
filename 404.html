@@ -7,48 +7,48 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #212529; /* Dark background for the body */
-            color: #f8f9fa; /* Light text color */
+            background-color: #212529; 
+            color: #f8f9fa; 
         }
         .navbar {
             margin-bottom: 20px;
         }
         footer {
-            background-color: #343a40; /* Darker background for the footer */
-            color: #f8f9fa; /* Light text color */
+            background-color: #343a40; 
+            color: #f8f9fa; 
             padding: 10px 0;
             text-align: center;
         }
         .section-content {
-            background-color: #343a40; /* Dark background for sections */
+            background-color: #343a40;
             padding: 20px;
-            border: 1px solid #495057; /* Slightly lighter border */
-            border-radius: 8px;
+            border: 1px solid #495057; 
+            border-radius: 15px; 
             margin-bottom: 20px;
-            text-align: center; /* Center text */
+            text-align: center;
         }
         .section-content img,
         .section-content video {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
-            margin-bottom: 15px; /* Space between elements */
+            margin-bottom: 15px; 
         }
         .section-content .img-container {
             display: flex;
             justify-content: space-between;
-            gap: 10px; /* Space between images */
+            gap: 10px; 
         }
         .section-content .img-container img {
             flex: 1;
-            max-height: 200px; /* Define a height limit for images */
-            object-fit: cover; /* Ensure the images cover the container */
+            max-height: 200px; 
+            object-fit: cover; 
         }
         .navbar-dark .navbar-nav .nav-link {
-            color: #f8f9fa; /* Light color for nav links */
+            color: #f8f9fa; 
         }
         .navbar-dark .navbar-nav .nav-link:hover {
-            color: #adb5bd; /* Slightly lighter color on hover */
+            color: #adb5bd; 
         }
         .container {
             display: flex;
@@ -64,6 +64,29 @@
         .collapse-section.show {
             display: block;
         }
+        .section-content {
+    position: relative; 
+    background-color: #343a40;
+    padding: 20px;
+    border: 1px solid #495057; 
+    border-radius: 15px; 
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+.img-container {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    margin-bottom: 15px; 
+    z-index: 1; 
+}
+
+.section-content video {
+    margin-top: 150px; 
+}
+
     </style>
 </head>
 <body>
@@ -85,11 +108,13 @@
                         <a class="nav-link" href="#stern-gerlach">Experimento de Stern-Gerlach (1922)</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#novo-card">Bobina de tesla</a>
+                        <a class="nav-link" href="#novo-card">Novo Card</a>
                     </li>
-                   
                     <li class="nav-item">
-                        <a class="nav-link" href="#novo-card-duplo">EXplicação</a>
+                        <a class="nav-link" href="#card-adicional">Card Adicional</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#novo-card-duplo">Novo Card Duplo</a>
                     </li>
                 </ul>
             </div>
@@ -212,16 +237,27 @@ Transmissão Sem Fio: Tesla acreditava que a bobina de Tesla poderia ser usada p
                     <h2>ORAÇÃO HOJE AS 23:49 PRA FALENCIA DOS CORREIOS</h2>
                     <div class="img-container">
                         <img src="morra.png" alt="Experimento 1">
-                        
                     </div>
-                    <p>Bom eu não consigue terminar a bobina de tesla graças a essa empresa demoniaca, os correis, atrasaram as coisas que eu comprei para o experimento, tinha que ser estatal, mas espero que o professor me permita apresentar na proxima aula.<br>
+                    <p>Bom eu não consegui terminar a bobina de Tesla graças a essa empresa demoníaca, tinha que ser estatal, mas espero que o professor me permita apresentar na próxima aula.<br>
                     Obrigado pela atenção.</p>
-                   
-                    </div>
                 </section>
             </div>
         </div>
     </div>
+    <!-- Novo Card Duplicado -->
+<div class="col-md-4">
+    <section id="novo-card-duplicado" class="section-content">
+        <h2>Experimento do copo invertido</h2>
+       
+        
+        <p>O experimento do copo invertido envolve um copo cheio de água, que é coberto por um pedaço de papel. Ao virar o copo de cabeça para baixo, o papel deve segurar a água, evitando que ela caia.</p>
+        <button class="btn btn-light" onclick="toggleCollapse(this)">Mais Informações</button>
+        <div class="collapse-section">
+            <p>Isso ocorre devido à pressão atmosférica. Quando o copo é invertido, a pressão do ar empurra o papel contra a borda do copo, impedindo que a água saia. A força da gravidade tenta puxar a água para baixo, mas a pressão atmosférica é suficiente para manter o papel no lugar.</p>
+        </div>
+    </section>
+</div>
+
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
